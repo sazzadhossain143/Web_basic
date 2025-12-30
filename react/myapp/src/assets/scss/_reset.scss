@@ -1,0 +1,74 @@
+/* font family */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200;1,600&family=Roboto:ital,wght@0,500;1,500;1,700&display=swap');
+
+@font-face {
+    font-family: 'OtomanopeeOne-Regular';
+    src: url('../fonts/OtomanopeeOne-Regular.ttf') format('truetype');
+}
+
+/* font family */
+
+/******************* reset and common code starts ***************/
+
+    $sidebr-clr:#464952;
+    $header-clr:#FFFAE3;
+    $main-clr:#FFFEF9;
+    $btn-clr:#FFBD00;
+    $hdline-clr:#FFBD00;
+    $input_clr: #464952;
+    $label_clr: #A7AEC2;
+    $border_clr: #EDEDED;
+    $step_clr: #2F5665;
+    $wite-clr: #FFF;
+    $background: #FDFDFD;
+    $padding: 0.5rem;
+    $transition: all 3s;
+    $border-radius: 0.6rem;
+    $box-shadow: 0.1rem 0.2rem 0.8rem rgba(205,202,202,0.15);
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Outfit','Roboto', sans-serif ;
+    font-style: normal;
+}
+html{
+    scroll-behavior: smooth;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+a{
+    color: #FFF;
+}
+
+button{
+    display: inline-flex;
+    cursor: pointer;
+    border: none;
+    // color: $wite-clr;
+    border-radius: 4px;
+    background: $btn-clr;
+}
+.card{
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    transition: $transition;
+    padding: $padding;
+}
+
+.hdline{
+    color: #FFBD00;
+    font-family: Outfit;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+/******************* reset and common code ends ***************/
