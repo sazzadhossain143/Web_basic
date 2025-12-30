@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop down navbar</title>
+    
+    
+    <style>
+        
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        #navbar{
+            width: 100%;
+            height: 60px;
+            background-color: green;
+            text-align: center;
+        }
+        #navbar ul{
+            list-style: none;
+            display: inline-flex;
+            color: white;
+   
+        }
+        #navbar ul li{
+            margin: 10px;
+            padding: 10px;
+            width: 100px;
+        }
+        #navbar ul li:hover{
+            background-color: rgb(43, 161, 10);
+            border-radius: 3px;
+        }
+        #navbar ul li a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+        .fa-solid{
+            margin-right: 3px;
+        }
+        #submenu{
+            display: none;
+        }
+        #navbar ul li:hover #submenu{
+            display: block;
+            position: absolute;
+            background-color: rgb(10, 128, 10);
+            margin-top: 15px;
+            margin-left: -15px;
+
+        }
+        #navbar ul li:hover #submenu ul{
+            display: block;
+            margin: 5px;
+        }
+        #navbar ul li:hover #submenu ul li{
+            width: 100px;
+            padding: 5px;
+            border-bottom: 1px dotted #fff;
+            background: transparent;
+            text-align: left;
+        }
+        #navbar ul li:hover #submenu ul li:last-child{
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a>
+                <div id="submenu">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Home</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
+        </ul>
+    </div>
+    <div>
+        
+        
+    </div>
+
+</body>
+</html>

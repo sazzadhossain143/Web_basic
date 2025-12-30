@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+input[type="file"]{
+    display: none;
+}
+label{
+    display: block;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+    
+<div class="contenar">
+    <figure class="img-container">
+        <img id="chosen-img" >
+        <figcaption id="file-name">
+            <!-- Upload file -->
+        </figcaption>
+    </figure>
+    <input type="file" id="upload-btn" accept="image/*" name="" value="">
+    <label for="upload-btn" id="change">
+        chose a photo
+    </label>
+</div>
+
+name : <span id="rname"></span><br>
+email : <span id="remail"></span>
+
+
+<script >
+    let uploadBtn = document.getElementById("upload-btn");
+    let choseImg = document.getElementById("chosen-img");
+    let fileName = document.getElementById("file-name");
+
+    uploadBtn.onchange = () => {
+        let reader = new FileReader();
+        reader.readAsDataURL(uploadBtn.files[0]);
+        console.log(uploadBtn.files[0]);
+        reader.onload = () => {
+            choseImg.setAttribute("src",reader.result);
+        }
+        fileName.textContent = uploadBtn.files[0].name;
+        document.getElementById("change").innerHTML = uploadBtn.files[0].name;
+    }
+
+    window.addEventListener('load',() =>{
+    const params = (new URL(document.location)).searchParams;
+    console.log(params);
+    const name = params.get(name);
+    const email = params.get(email);
+    // const phone = params.get(phone);
+    // const gender = params.get(gender);
+    // const profession = params.get(profession);
+    // const tshirt = params.get(t-shirt-size);
+
+    document.getElementById('rname').innerHTML = name;
+    document.getElementById('remail').innerHTML = email;
+    // document.getElementById('rphone').innerHTML = phone;
+    // document.getElementById('rgender').innerHTML = gender;
+    // document.getElementById('rprofession').innerHTML = profession;
+    // document.getElementById('rtshirt').innerHTML = tshirt;
+
+})
+
+</script>
+</body>
+</html>

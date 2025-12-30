@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex layout</title>
+    <style>
+        .flex1, .flex2, .flex3, .flex4,.flex5{
+            margin-top: 10px;
+            background-color: aquamarine;
+            height: 40vh;
+            display: flex;
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+            /* flex-direction: column;  */
+            /* flex-direction: column-reverse; */
+            /* flex-flow: wrap row;  */
+            /* flex-flow: flex-wrap-direction r kaj ak sthe kore */
+            /* flex-flow: wrap column;  */
+
+            /* justify-content: center; */
+            /* justify-content: flex-end;/* 
+            /* flex-end - only row jono kaj kore */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+
+            /* align-items: center; */
+            /* align-items: end; */
+        }
+        .flex2{
+            /* width: 50%; */
+            flex-direction: column;
+            /* justify-content: flex-end;  only row jono kaj kore*/
+            align-items: end;
+            /* align-items: self-end; */
+        }
+        .flex3{
+            /* width: 50%; */
+            flex-flow: wrap row;
+            justify-content: flex-end;
+            align-items: center;
+            
+        }
+        .flex4{
+            /* width: 50%; */
+            flex-flow: wrap column;
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            /* align-items: center; */
+            align-items: end;
+            justify-content: flex-end;
+        }
+        .flex1 div,.flex2 div, .flex3 div, .flex4 div, .flex5 div{
+            height: 5vh;
+            width: 20vb;
+            font-size: 30px;
+            margin: 10px;
+            /* margin-top: 10px; */
+            padding: 15px;
+            background-color: azure;
+        }
+        .flex5>.div2{
+            flex: 2;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="flex1">
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+        <div class="div3">div3</div>
+    </div>
+    <div class="flex2">
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+        <div class="div3">div3</div>
+    </div>
+    <div class="flex3">
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+        <div class="div3">div3</div>
+    </div>
+    <div class="flex4">
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+        <div class="div3">div3</div>
+    </div>
+    <div class="flex5">
+        <div class="div1">div1</div>
+        <div class="div2">div2</div>
+        <div class="div3">div3</div>
+    </div>
+
+    
+</body>
+</html>
